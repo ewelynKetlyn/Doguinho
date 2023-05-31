@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Random Dog</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gerar_dog">Vamos gerar doguinhos aleatorios?</string>
+    <string name="vamos_la_btn">Vamos lá !</string>
+    <string name="gerar_dog_btn">Gerar um novo doguinho</string>
+</resources>
