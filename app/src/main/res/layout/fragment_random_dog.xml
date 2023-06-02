@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".FragmentRandomDog">
+    tools:context=".presentation.fragment.FragmentRandomDog">
 
     <ImageView
+        android:layout_marginTop="20dp"
         android:id="@+id/imgRandom"
         android:layout_width="match_parent"
         android:layout_height="250dp"
