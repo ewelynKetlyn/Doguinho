@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_initialFragment_to_fragmentRandomDog"
             app:destination="@id/fragmentRandomDog" />
+        <action
+            android:id="@+id/action_initialFragment_to_allBreedsFragment"
+            app:destination="@id/allBreedsFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentRandomDog"
         android:name="com.example.randomdog.presentation.fragment.FragmentRandomDog"
         android:label="fragment_random_dog"
         tools:layout="@layout/fragment_random_dog" />
+    <fragment
+        android:id="@+id/allBreedsFragment"
+        android:name="com.example.randomdog.presentation.fragment.AllBreedsFragment"
+        android:label="fragment_all_breeds"
+        tools:layout="@layout/fragment_all_breeds" />
 </navigation>

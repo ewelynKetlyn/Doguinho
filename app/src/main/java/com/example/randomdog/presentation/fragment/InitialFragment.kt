@@ -22,6 +22,10 @@ class InitialFragment : Fragment() {
             findNavController().navigate(R.id.action_initialFragment_to_fragmentRandomDog)
         }
 
+        binding.buttonBreeds.setOnClickListener {
+            findNavController().navigate(R.id.action_initialFragment_to_allBreedsFragment)
+        }
+
         return binding.root
     }
 }

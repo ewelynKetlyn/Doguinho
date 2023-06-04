@@ -53,7 +53,6 @@ class FragmentRandomDog : Fragment() {
                 println("Deu ruim")
             }
         })
-
         btnGenerateDog.setOnClickListener {
             viewModel.getRandomDog()
         }
