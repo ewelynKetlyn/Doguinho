@@ -12,4 +12,5 @@ Api utilizada: https://dog.ceo/dog-api/documentation/random
 
 -Navigation
 
-[device-2023-05-31-200934.webm](https://github.com/ewelynKetlyn/Doguinho/assets/70103423/d5f3e855-618c-44a6-ba40-d3aaebb1ada5)
+
+[randomdog3.webm](https://github.com/ewelynKetlyn/Doguinho/assets/70103423/96847ee3-179c-4d07-99f9-888ce3c8c649)
