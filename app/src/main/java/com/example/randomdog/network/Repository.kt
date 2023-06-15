@@ -8,7 +8,6 @@ class Repository {
     suspend fun getDog(): Response<Dog> {
         return RetrofitInstance.api.getRandomDog()
     }
-
     suspend fun getAllBreeds(): Response<BreedsResponse>{
         return RetrofitInstance.api.getAllBreeds()
     }

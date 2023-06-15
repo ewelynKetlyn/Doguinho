@@ -7,4 +7,5 @@
     <string name="gerar_dog_btn">Gerar um novo doguinho</string>
     <string name="ver_racas">Vamos ver todas as raças?</string>
     <string name="ver_racas_btn">Ver raças</string>
+    <string name="hint_search_view">Pesquisar raça</string>
 </resources>

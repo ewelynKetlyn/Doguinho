@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,7 +16,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import okhttp3.Dispatcher
 
 class AllBreedsFragment : Fragment() {
     private lateinit var binding: FragmentAllBreedsBinding
@@ -38,6 +38,17 @@ class AllBreedsFragment : Fragment() {
         breedAdapter = BreedAdapter(emptyList())
         breedRecyclerView.adapter = breedAdapter
         fetchAllBreeds()
+
+        binding.searchview.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                breedAdapter.filter(newText)
+                return true
+            }
+        })
     }
 
     private fun fetchAllBreeds() {

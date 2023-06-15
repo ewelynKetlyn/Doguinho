@@ -10,6 +10,8 @@ import com.example.randomdog.R
 class BreedAdapter(private var breedList: List<String>) :
     RecyclerView.Adapter<BreedAdapter.ViewHolder>() {
 
+    private var originalBreedList: List<String> = breedList
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.breed_item, parent, false)
         return ViewHolder(view)
@@ -25,7 +27,19 @@ class BreedAdapter(private var breedList: List<String>) :
     }
 
     fun updateBreedList(newBreedsList: List<String>){
+        originalBreedList = newBreedsList
         breedList = newBreedsList
+        notifyDataSetChanged()
+    }
+
+    fun filter(query: String){
+        breedList = if (query.isEmpty()){
+            originalBreedList
+        }else{
+            originalBreedList.filter {
+                it.contains(query, ignoreCase = true)
+            }
+        }
         notifyDataSetChanged()
     }
 
